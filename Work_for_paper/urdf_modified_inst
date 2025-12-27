@@ -1,0 +1,10 @@
+Terminal 1:
+ros2 launch ur_description view_ur.launch.py ur_type:=ur16e 
+
+Terminal 2:
+ros2 run tf2_ros static_transform_publisher 0 0 0 0 0 0 map base_link
+
+Terminal 3:
+ros2 run tf2_ros static_transform_publisher 0 0 0 0 0 0 map world
+
+Then save .rviz config

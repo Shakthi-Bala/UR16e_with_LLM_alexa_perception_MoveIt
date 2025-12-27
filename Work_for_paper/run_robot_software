@@ -1,0 +1,22 @@
+Terminal 1:
+ros2 launch ur_robot_driver ur_control.launch.py ur_type:=ur16e robot_ip:=192.168.1.6 use_fake_hardware:=true
+
+Terminal2:
+ros2 launch ur_moveit_config ur_moveit.launch.py ur_type:=ur16e launch_rviz:=true 
+
+Terminal3:
+ros2 control switch_controllers --activate joint_trajectory_controller --strict
+
+Terminal4: "To test with custom xyz point"
+ros2 run ur_moveit_cpp_ext moveit_xyz 
+
+**NOTE**: Do not run in cyclone DDS, The simulation, hardware both are not working
+
+Command to convert xacro into urdf:
+xacro ur.urdf.xacro ur_type:=ur16e name:=ur16e prefix:="" robot_ip:=192.168.1.10 force_abs_paths:=false > ur16e.urdf
+
+Command to check if the package is on the absolute path or installed path:
+ros2 pkg prefix <package_name>
+if not:
+source install/setup.bash
+

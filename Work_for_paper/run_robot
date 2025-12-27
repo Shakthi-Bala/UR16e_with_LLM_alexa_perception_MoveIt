@@ -1,0 +1,17 @@
+Termianal1:
+ros2 launch ur_robot_driver ur_control.launch.py ur_type:=ur16e robot_ip:=192.168.1.6 kinematics_params_file:=/home/alien/my_robot_calibration.yaml
+
+Termianl2: 
+ros2 launch ur_moveit_config ur_moveit.launch.py ur_type:=ur16e launch_rviz:=true 
+
+Terminal3:
+ros2 control switch_controllers --activate scaled_joint_trajectory_controller --strict
+
+
+IP:
+robot_ip: 192.168.1.6
+
+pc_static_ip: 192.168.1.7
+
+To view frames:
+ros2 run tf2_tools view_frames

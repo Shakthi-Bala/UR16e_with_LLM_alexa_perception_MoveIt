@@ -1,0 +1,18 @@
+To train the robot:
+./isaaclab.sh -p scripts/reinforcement_learning/rsl_rl/train.py --task Isaac-Reach-UR10-v0 --headless
+
+
+To generate .pt file:
+./isaaclab.sh -p scripts/reinforcement_learning/rsl_rl/play.py --task Isaac-Reach-UR10-v0 --headless
+
+
+To check the .pt file:
+
+python scripts/reinforcement_learning/rsl_rl/play.py \
+  --task Isaac-Reach-UR16e-v0 \
+  --checkpoint /home/alien/IsaacLab/logs/rsl_rl/reach_ur10/2025-07-23_10-16-55/model_999.pt \
+  --video \
+  --num_envs 1 \
+  --rendering_mode quality \
+  --real-time
+
