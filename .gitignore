@@ -11,3 +11,8 @@ install/
 # Ignore heavy USD assets (not pushed)
 source/SO_100/SO_100/tasks/manager_based/ROS_so_100/asset/*.usd
 source/SO_100/SO_100/tasks/manager_based/ROS_so_100/asset/configuration/*.usd
+# Large / generated assets not pushed
+*.usd
+*.usda
+*.usdc
+*.tmp.usd
