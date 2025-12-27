@@ -21,3 +21,8 @@ source/SO_100/SO_100/tasks/manager_based/ROS_so_100/asset/configuration/*.usd
 *.usda
 *.usdc
 *.tmp.usd
+# ignore USD assets (not pushed)
+*.usd
+*.usda
+*.usdc
+*.tmp.usd
